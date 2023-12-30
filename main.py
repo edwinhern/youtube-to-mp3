@@ -35,9 +35,7 @@ def main():
             print("No more URLs entered. Starting download...")
             break
 
-    # Replace the string below with the path to the folder where you want to save the downloads
-    # Example: destination = "C:/Users/YourUsername/Downloads"
-    destination = "/path/to/your/destination/folder"
+    destination = os.path.join(os.getcwd(), 'downloaded-music')
 
     # Check if destination folder exists, if not create it
     if not os.path.exists(destination):
